@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murilo Brandalise | Desenvolvedor</title>
+
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bibliotecas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Partículas de fundo -->
+    <div id="particles-js"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">MB</div>
+            <div class="social-links">
+                <a href="https://github.com/MuriloBrandaliseDev?tab=repositories" target="_blank"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/murilo-brandalise-750618257/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/murilo_brandalise/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="Murilo Brandalise">Murilo Brandalise</h1>
+                <p class="subtitle">Desenvolvedor Full Stack</p>
+                <div class="description">
+                    <p>Transformando ideias em experiências digitais únicas através de código limpo e design inovador.
+                        Especializado em criar soluções web modernas e intuitivas que fazem a diferença.</p>
+                </div>
+                <button class="cta-button">Ver Projetos <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="hero-3d">
+                <canvas id="hero-canvas"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Characteristics Section -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Habilidades & Expertise</h2>
+
+            <!-- Características Cards -->
+            <div class="characteristics">
+                <div class="char-card" data-tilt>
+                    <div class="card-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Inovador</h3>
+                    <p>Sempre buscando as mais recentes tecnologias e soluções criativas para cada projeto.</p>
+                </div>
+                <div class="char-card" data-tilt>
+                    <div class="card-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>Versátil</h3>
+                    <p>Adaptável a diferentes tecnologias e ambientes de desenvolvimento.</p>
+                </div>
+                <div class="char-card" data-tilt>
+                    <div class="card-icon">
+                        <i class="fas fa-users-gear"></i>
+                    </div>
+                    <h3>Colaborativo</h3>
+                    <p>Experiência em trabalho em equipe e comunicação efetiva em projetos.</p>
+                </div>
+            </div>
+
+            <!-- Tech Skills -->
+            <div class="tech-skills">
+                <div class="skills-group">
+                    <h3>Desenvolvimento Front-end</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>HTML5/CSS3</span>
+                                <span class="percentage">96%</span>
+                            </div>
+                            <div class="progress-line"><span data-percent="95"></span></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>JavaScript/TypeScript</span>
+                                <span class="percentage">90%</span>
+                            </div>
+                            <div class="progress-line"><span data-percent="90"></span></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>React/Next.js</span>
+                                <span class="percentage">90%</span>
+                            </div>
+                            <div class="progress-line"><span data-percent="88"></span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <h3>Desenvolvimento Back-end</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Node.js</span>
+                                <span class="percentage">92%</span>
+                            </div>
+                            <div class="progress-line"><span data-percent="92"></span></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <span class="percentage">85%</span>
+                            </div>
+                            <div class="progress-line"><span data-percent="85"></span></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>SQL/NoSQL</span>
+                                <span class="percentage">87%</span>
+                            </div>
+                            <div class="progress-line"><span data-percent="87"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expertise Cards -->
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="card-content">
+                        <div class="card-front">
+                            <i class="fas fa-globe"></i>
+                            <h3>Desenvolvimento Web</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Criação de sites responsivos e aplicações web modernas com foco em performance e UX.</p>
+                            <ul>
+                                <li>Sites Institucionais</li>
+                                <li>E-commerces</li>
+                                <li>Web Apps</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="expertise-card">
+                    <div class="card-content">
+                        <div class="card-front">
+                            <i class="fas fa-mobile-screen"></i>
+                            <h3>Apps Mobile</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Desenvolvimento de aplicativos nativos e híbridos para iOS e Android.</p>
+                            <ul>
+                                <li>React Native</li>
+                                <li>Flutter</li>
+                                <li>PWAs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="expertise-card">
+                    <div class="card-content">
+                        <div class="card-front">
+                            <i class="fas fa-server"></i>
+                            <h3>Sistemas</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Desenvolvimento de sistemas robustos e escaláveis para empresas.</p>
+                            <ul>
+                                <li>ERPs</li>
+                                <li>CRMs</li>
+                                <li>APIs RESTful</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title">Meus Projetos</h2>
+            <div class="portfolio-grid">
+                <!-- Projeto 1 -->
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <img src="imagens/Querolar.png" alt="Projeto 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>Sistema ERP Querolar</h3>
+                        <p>Sistema ERP para gerenciamento de demandas, atendimentos e clientes.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/MuriloBrandaliseDev?tab=repositories" target="_blank"
+                                title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/murilo-brandalise-750618257/" target="_blank"
+                                title="Ver Online"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projeto 2 -->
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <img src="imagens/controle financeiro.png" alt="Projeto 5">
+                    </div>
+                    <div class="project-info">
+                        <h3>Sistema de Controle Financeiro</h3>
+                        <p>Sistema de controle financeiro para gerenciamento de finanças pessoais e empresariais.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/murilo-brandalise-750618257/" target="_blank"
+                                title="Ver Online"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projeto 3 -->
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <img src="imagens/Sistema de demandas.png" alt="Projeto 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Sistema de Demandas</h3>
+                        <p>Sistema de demandas para gerenciamento de demandas, atendimentos e clientes.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/MuriloBrandaliseDev/Demandas" target="_blank" title="GitHub"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/murilo-brandalise-750618257/" target="_blank"
+                                title="Ver Online"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projeto 4 -->
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <img src="imagens/Aplicativo de Demandas.png" alt="Projeto 3">
+                    </div>
+                    <div class="project-info">
+                        <h3>Aplicativo de Demandas</h3>
+                        <p>Aplicativo de demandas para gerenciamento de demandas, atendimentos e clientes.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/MuriloBrandaliseDev/Demanda_app" target="_blank"
+                                title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/murilo-brandalise-750618257/" target="_blank"
+                                title="Ver Online"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projeto 5 -->
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <img src="imagens/site de padaria.png" alt="Projeto 4">
+                    </div>
+                    <div class="project-info">
+                        <h3>Site de Padaria</h3>
+                        <p>Site de padaria com animações, efeitos de partículas e integração de formulário.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/MuriloBrandaliseDev/Site_Padaria" target="_blank"
+                                title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/murilo-brandalise-750618257/" target="_blank"
+                                title="Ver Online"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projeto 6 -->
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <img src="imagens/Site portfólio.png" alt="Projeto 5">
+                    </div>
+                    <div class="project-info">
+                        <h3>Site de Portfólio</h3>
+                        <p>Site de modelo de portfólio com animações, efeitos de partículas e integração de formulário.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/murilo-brandalise-750618257/" target="_blank"
+                                title="Ver Online"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projeto 7 -->
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <img src="imagens/site de transportadora.png" alt="Projeto 6">
+                    </div>
+                    <div class="project-info">
+                        <h3>Site de Transportadora</h3>
+                        <p>Site de transportadora com animações, efeitos de partículas e integração de formulário.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/MuriloBrandaliseDev/Projeto-Transportadora" target="_blank"
+                                title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/murilo-brandalise-750618257/" target="_blank"
+                                title="Ver Online"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-left">
+                <div class="contact-photo" data-tilt>
+                    <img src="imagens/MinhaFOTO.jpeg" alt="Foto de Murilo Brandalise">
+                </div>
+                <div class="contact-content">
+                    <h2 class="section-title">Vamos conversar?</h2>
+                    <p class="contact-text">Entre em contato para orçamentos, parcerias ou oportunidades! Empresas e
+                        recrutadores são muito bem-vindos. Respondo rapidamente ;)</p>
+                    <div class="contact-info">
+                        <div><i class="fas fa-phone"></i> <span>(49) 99917-3932</span></div>
+                        <div><i class="fas fa-envelope"></i> <span>murilobrandalise98@gmail.com</span></div>
+                        <div><i class="fas fa-id-card"></i> <span>CNPJ: 57.307.231/0001-60 </span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form class="contact-form" action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="nome" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Seu e-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="send-button">Enviar Mensagem <i
+                            class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <!-- Botão flutuante WhatsApp -->
+        <a href="https://wa.me/5549999173932" class="whatsapp-float" target="_blank" title="Fale comigo no WhatsApp"
+            data-tilt>
+            <div class="whatsapp-3d">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+        </a>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="js/particles-config.js"></script>
+    <script src="js/three-animation.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.querySelector('.cta-button').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('#portfolio').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>
